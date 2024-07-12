@@ -1,5 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const arrayOfLetters = word.split("");
+	const reverseLetters = arrayOfLetters.reverse();
+	const reverseString = reverseLetters.join("");
+
+	if (word == reverseString) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /* 
@@ -7,8 +16,18 @@ function isPalindrome(word) {
 */
 
 /*
+  Split the array of letter to single letter
+  check if word is equal to its reversed version
+  Join the reversed version to an array or a word
+    if word is the same as its reversed version:
+        return true
+    if word is not the same as its reversed version
+        return false
+
+/*
   Add written explanation of your solution here
 */
+
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
